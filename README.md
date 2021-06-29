@@ -1,3 +1,6 @@
+# Search Engine UI
+![Homepage](https://github.com/nicholim/search-engine-ui/blob/master/homepage.jpg?raw=true)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
