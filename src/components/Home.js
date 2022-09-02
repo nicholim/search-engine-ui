@@ -85,7 +85,7 @@ const Home = () => {
     const relevantSad = () => {
         let listUrls = [];
         let count = 0;
-        results.map(result=>{
+        results.forEach(result=>{
             if(count<5) {
                 listUrls.push(result.url);
                 count++;
