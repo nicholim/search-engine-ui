@@ -40,7 +40,7 @@ export default () => {
           </ThemeProvider>
           <MDBFooter className='bg-dark text-white text-center text-lg-left'>
               <div className='text-center p-3' >
-                  &copy; {new Date().getFullYear()} Copyright: Group 2 COMP4321
+                  &copy; {new Date().getFullYear()} Copyright: NL
               </div>
           </MDBFooter>
       </>

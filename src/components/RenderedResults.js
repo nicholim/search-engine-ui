@@ -9,9 +9,8 @@ const RenderedResults = (props) =>{
 
     // posting relevant query to API for weighting changes
     const relevantHappy = (link) => {
-        const searchRelevant=async()=>{
-            // await axios.post('http://143.89.130.177/relevance',{
-            await axios.post('http://localhost:8888/relevance',{
+        const searchRelevant=async()=>{            
+            await axios.post('/relevance',{
                 id: uuidv4(),
                 url: link,
                 query: props.term

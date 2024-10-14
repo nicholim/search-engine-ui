@@ -26,7 +26,7 @@ import axios from 'axios';
 const Home = () => {
 
     // search bar main components
-    const [term, setTerm] = useState('head of cse');
+    const [term, setTerm] = useState('Welcome');
     const [debouncedTerm, setDebouncedTerm] = useState(term);
     const [results, setResults] = useState([]);
     const [loaded, setLoaded] = useState(true);
@@ -44,8 +44,7 @@ const Home = () => {
     }, [term]);
 
     const search=async()=>{
-        const {data} = await axios.get('http://143.89.130.177/search',{
-            // const {data} = await axios.get('http://localhost:8888/search',{
+        const {data} = await axios.get('/search',{            
             mode: 'no-cors',
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -64,8 +63,7 @@ const Home = () => {
     const [indexed, setIndexed] = useState([]);
     useEffect(()=>{
         const searchIndexed=async()=> {
-            await axios.get('http://143.89.130.177/indexed', {
-                // const {data} = await axios.get('http://localhost:8888/indexed',{
+            await axios.get('/indexed', {                
                 mode: 'no-cors',
                 headers: {
                     'Access-Control-Allow-Origin': '*',
@@ -96,7 +94,7 @@ const Home = () => {
         });
 
         const searchIrrelevant=async()=>{
-            await axios.post('http://143.89.130.177/irrelevance',{
+            await axios.post('/irrelevance',{
                 query: debouncedTerm,
                 urls: listUrls
             });

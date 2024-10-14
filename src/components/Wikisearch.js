@@ -3,7 +3,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardHeader, MDBBtn, MDBInput,
 import axios from 'axios';
 
 const Wikisearch = () => {
-    const [term, setTerm] = useState('information retrieval');
+    const [term, setTerm] = useState('investment analysis');
     const [debouncedTerm, setDebouncedTerm] = useState(term);
     const [results, setResults] = useState([]);
 
